@@ -1,14 +1,17 @@
 const m = require('mithril');
 const root = document.body;
 
+const Model = {
+  count: 0,
+}
+
 const Main = {
   view: () => {
-    return m("main", [
-      m('p', Main.count),
-      m('button', {onclick: () => Main.count++}, 'test'),
+    return m('main', [
+      m('button', {onclick: () => Model.count++}, 'Count more'),
+      m('p', Model.count),
     ]);
   },
-  count: 1,
 }
 
 m.mount(root, Main);
