@@ -1,0 +1,3 @@
+*.swpm
+node_modules
+dist/*
