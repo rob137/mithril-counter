@@ -8,7 +8,8 @@ const Model = {
 const Main = {
   view: () => {
     return m('main', [
-      m('button', {onclick: () => Model.count++}, 'Count more'),
+      m('button', {onclick: () => Model.count--}, 'Count down'),
+      m('button', {onclick: () => Model.count++}, 'Count up'),
       m('p', Model.count),
     ]);
   },
